@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
 import { IPHONE_GENERATIONS } from '../data/products';
@@ -34,6 +34,13 @@ export const GenerationGrid: React.FC<GenerationGridProps> = ({
       ? assetUrl(thumbnail.slice(1))
       : thumbnail;
   };
+
+  useEffect(() => {
+    IPHONE_GENERATIONS.slice(0, 4).forEach((gen) => {
+      const image = new Image();
+      image.src = generationImage(gen.thumbnail);
+    });
+  }, []);
 
   return (
     <section id="geracoes" className="relative py-10 sm:py-16 md:py-24">
@@ -80,12 +87,10 @@ export const GenerationGrid: React.FC<GenerationGridProps> = ({
             return (
               <motion.div
                 key={gen.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                initial={false}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.55,
-                  delay: (index % 4) * 0.06,
+                  duration: 0.2,
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 onClick={() => selectGeneration(gen)}
@@ -96,7 +101,7 @@ export const GenerationGrid: React.FC<GenerationGridProps> = ({
                 }`}
               >
                 <div
-                  className={`pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[${gen.colorHex}] opacity-20 blur-2xl transition-opacity duration-300 sm:h-44 sm:w-44 ${
+                  className={`pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-20 blur-2xl transition-opacity duration-300 sm:h-44 sm:w-44 ${
                     isSelected ? 'opacity-40' : 'group-hover:opacity-30'
                   }`}
                   style={{ backgroundColor: gen.colorHex }}
@@ -153,7 +158,6 @@ export const GenerationGrid: React.FC<GenerationGridProps> = ({
                     <span>Ver opções</span>
                     <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
                   </span>
-
                 </div>
               </motion.div>
             );
