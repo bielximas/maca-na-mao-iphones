@@ -48,9 +48,13 @@ export const TradeInProgress: React.FC = () => {
                   key={step.number}
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 sm:p-8 border border-purple-100/80 shadow-sm hover:shadow-apple-md transition-all duration-300 flex flex-col relative group"
+                  viewport={{ once: true, amount: 0.25 }}
+                  transition={{
+                    duration: 0.55,
+                    delay: index * 0.08,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="mobile-scroll-reveal bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 sm:p-8 border border-purple-100/80 shadow-sm hover:shadow-apple-md transition-all duration-300 flex flex-col relative group"
                 >
                   <div className="flex items-center justify-between mb-3 sm:mb-6">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-[#6624D8] to-[#FF3C91] text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform flex-shrink-0">

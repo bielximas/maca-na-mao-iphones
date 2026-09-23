@@ -35,9 +35,13 @@ export const TrustSection: React.FC = () => {
               key={pillar.title}
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-[#FFF7FB] rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-purple-100/80 shadow-sm hover:shadow-apple-md transition-all duration-300 flex flex-col"
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{
+                duration: 0.55,
+                delay: index * 0.08,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="mobile-scroll-reveal bg-[#FFF7FB] rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-purple-100/80 shadow-sm hover:shadow-apple-md transition-all duration-300 flex flex-col"
             >
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-white shadow-sm flex items-center justify-center mb-4 sm:mb-6 border border-purple-50 flex-shrink-0">
                 {iconMap[pillar.icon]}

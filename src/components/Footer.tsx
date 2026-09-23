@@ -24,17 +24,17 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Brand & Bio */}
           <div className="md:col-span-5 flex flex-col items-start">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#6624D8] via-[#FF3C91] to-[#FF9B32] p-0.5">
-                <div className="w-full h-full bg-[#161329] rounded-[10px] flex items-center justify-center">
-                  <span className="font-extrabold text-white text-base">M</span>
-                </div>
-              </div>
+            <div className="mb-4 flex items-center gap-3">
+              <img
+                src={`${import.meta.env.BASE_URL}images/logopreta.png`}
+                alt=""
+                className="h-14 w-14 rounded-full bg-white p-1 object-contain"
+              />
               <div>
                 <h3 className="text-xl font-extrabold tracking-tight text-white">
-                  {STORE_NAME}
+                  Maçã na mão Iphones
                 </h3>
-                <span className="text-xs text-[#FF9B32] font-semibold">
+                <span className="text-xs font-semibold text-[#FF9B32]">
                   {STORE_CITY}, {STORE_STATE}
                 </span>
               </div>
@@ -66,6 +66,16 @@ export const Footer: React.FC = () => {
                 </svg>
               </a>
             </div>
+
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 max-w-sm text-xs leading-relaxed text-[#FFB3D4] transition-colors hover:text-white"
+            >
+              Siga nosso Instagram para ter acesso a promoções exclusivas. Não
+              deixe de seguir: {INSTAGRAM_HANDLE}
+            </a>
           </div>
 
           {/* Col 2: Categories */}

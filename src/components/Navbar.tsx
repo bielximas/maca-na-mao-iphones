@@ -39,43 +39,13 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo with Custom "M" Monogram */}
-        <a href="#" className="flex items-center gap-2.5 sm:gap-3 group">
-          <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-[#6624D8] via-[#FF3C91] to-[#FF9B32] p-0.5 shadow-sm group-hover:shadow-apple-glow transition-all duration-300 flex-shrink-0">
-            <div className="w-full h-full bg-[#161329] rounded-[10px] flex items-center justify-center">
-              <svg
-                viewBox="0 0 40 40"
-                className="w-5 h-5 sm:w-6 sm:h-6"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10 28V12L20 22L30 12V28"
-                  stroke="url(#logoGradMobile)"
-                  strokeWidth="3.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <circle cx="30" cy="9" r="2" fill="#FF9B32" />
-                <defs>
-                  <linearGradient id="logoGradMobile" x1="10" y1="12" x2="30" y2="28" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#FF3C91" />
-                    <stop offset="0.5" stopColor="#6624D8" />
-                    <stop offset="1" stopColor="#0870B4" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <span className="font-extrabold text-base sm:text-xl tracking-tight text-[#201B32] group-hover:text-[#6624D8] transition-colors leading-none">
-              Maca na Mão
-            </span>
-            <span className="text-[9px] sm:text-[10px] font-semibold tracking-wider text-[#726B82] uppercase mt-0.5">
-              iPhones · Saquarema
-            </span>
-          </div>
+        {/* Brand Logo */}
+        <a href="#" className="flex items-center group">
+          <img
+            src={`${import.meta.env.BASE_URL}images/logo.png`}
+            alt="Maca na Mão iPhones"
+            className="h-11 w-36 object-contain object-left sm:h-14 sm:w-44"
+          />
         </a>
 
         {/* Desktop Navigation Links */}

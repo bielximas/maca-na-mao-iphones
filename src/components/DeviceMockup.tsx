@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface DeviceMockupProps {
   modelId: number | string;
@@ -23,6 +23,11 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({
 }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgError, setImgError] = useState(false);
+
+  useEffect(() => {
+    setImgLoaded(false);
+    setImgError(false);
+  }, [imageSrc]);
 
   const isPro = type === 'pro' || type === 'pro-max';
   const numId = typeof modelId === 'number' ? modelId : parseInt(modelId, 10) || 15;

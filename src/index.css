@@ -7,6 +7,14 @@
 }
 
 /* Custom smooth scroll and standard styling */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -17,6 +25,17 @@ body {
   background-color: #FFF7FB;
   color: #201B32;
   overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+  .mobile-hero-motion {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .mobile-scroll-reveal {
+    transform: translateY(0) !important;
+  }
 }
 
 /* Glassmorphism effects */
