@@ -131,7 +131,7 @@ export const ModelDetails: React.FC<ModelDetailsProps> = ({ generation }) => {
                         colorHex={generation.colorHex}
                         accentHex={generation.accentHex}
                         imageSrc={
-  version.thumbnail.startsWith('/')
+ version.thumbnail.startsWith('/')
     ? `${import.meta.env.BASE_URL}${version.thumbnail.slice(1)}`
     : version.thumbnail
 }
