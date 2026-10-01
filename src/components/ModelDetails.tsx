@@ -125,6 +125,7 @@ export const ModelDetails: React.FC<ModelDetailsProps> = ({ generation }) => {
                   <div className="my-0.5 flex h-28 w-full items-center justify-center overflow-visible sm:h-32">
                     <div className="h-full w-20 transition-transform duration-300 group-hover:scale-105 sm:w-24">
                       <DeviceMockup
+                      className="h-full w-full"
                         modelId={generation.id}
                         name={version.name}
                         type={version.type}

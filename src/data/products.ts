@@ -332,8 +332,8 @@ export const IPHONE_GENERATIONS: GenerationModel[] = [
         id: "iphone-15-standard",
         name: "iPhone 15",
         type: "standard",
-        price: 3099,
-        formattedPrice: "R$ 3.099",
+        price: 2.992,
+        formattedPrice: "R$ 2.992",
         storage: "128GB",
         condition: "Seminovo com garantia",
         description: "Traseira em vidro com infusão de cor, Dynamic Island integrada e conexão USB-C.",
@@ -512,33 +512,31 @@ export const IPHONE_GENERATIONS: GenerationModel[] = [
         id: "iphone-18-pro-pre-venda",
         name: "iPhone 18 Pro",
         type: "pro",
-        price: 0,
-        formattedPrice: "Aguarde a pré-venda",
+        price: 9.201,
+        formattedPrice: "R$ 9200",
         storage: "256GB",
         condition: "Lacrado, 1 ano de garantia",
-        availabilityLabel: "Aguarde a pré-venda",
         description: "Todas as 3 lentes com sensores de 48 MP, Face ID sob o display e chassi híbrido de alumínio e titânio.",
         screenSize: "6,4 pol. Infinity ProMotion",
         camera: "Trio 48 MP (Fusion, Ultra-Wide e Tele 5x)",
         chip: "A20 Ultra",
         thumbnail: "/images/iphones/iphone-18-pro.png",
-        inStock: false
+        inStock: true
       },
       {
         id: "iphone-18-pro-max-pre-venda",
         name: "iPhone 18 Pro Max",
         type: "pro-max",
-        price: 0,
-        formattedPrice: "Aguarde a pré-venda",
+        price: 10190,
+        formattedPrice: "R$ 10.190",
         storage: "256GB",
         condition: "Lacrado, 1 ano de garantia",
-        availabilityLabel: "Aguarde a pré-venda",
         description: "Dynamic Island microscópica, resfriamento com câmara de vapor para performance sustentada extrema.",
         screenSize: "6,9 pol. Infinity ProMotion XDR",
         camera: "Trio 48 MP Pro com novo teleobjetivo mecânico",
         chip: "A20 Ultra Max",
         thumbnail: "/images/iphones/iphone-18-pro-max.png",
-        inStock: false
+        inStock: true
       }
     ]
   }
