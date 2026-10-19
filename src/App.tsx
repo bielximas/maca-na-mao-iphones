@@ -9,6 +9,7 @@ import { MaintenanceCard } from './components/MaintenanceCard';
 import TradeInCalculator from './components/TradeInCalculator';
 import { TrustSection } from './components/TrustSection';
 import { EcosystemSection } from './components/EcosystemSection';
+import { XimescashSection } from './components/XimescashSection';
 import { LocationSection } from './components/LocationSection';
 import { CartDrawer } from './components/CartDrawer';
 import { MobileQuickBar } from './components/MobileQuickBar';
@@ -63,6 +64,8 @@ function AppContent() {
         <TrustSection />
 
         <EcosystemSection />
+
+        <XimescashSection />
 
         <LocationSection />
       </main>

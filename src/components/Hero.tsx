@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import {
   ArrowDown,
   CreditCard,
+  PiggyBank,
   MapPin,
   MessageCircle,
   ShieldCheck,
@@ -102,6 +103,14 @@ export const Hero: React.FC = () => {
               <span>Manutenção de iPhone</span>
             </button>
           </motion.div>
+
+          <a
+            href="#ximescash"
+            className="mt-2 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#218344] hover:bg-[#176B36] active:bg-[#12582C] text-white font-bold px-5 py-3 sm:px-7 sm:py-4 rounded-2xl shadow-sm active:scale-95 transition-all duration-200 text-sm sm:text-base"
+          >
+            <PiggyBank className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span>Economize dinheiro</span>
+          </a>
 
           <motion.div
             initial={{ opacity: 0 }}
